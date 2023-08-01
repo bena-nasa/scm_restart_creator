@@ -11,10 +11,10 @@ import argparse
 def parse_args():
 
    p = argparse.ArgumentParser(description='forcing_converter',formatter_class=argparse.RawDescriptionHelpFormatter)
-   p.add_argument('input_restart',type=str,help='input file yaml file',default=None)
-   p.add_argument('coord_file',type=str,help='input file yaml file',default=None)
-   p.add_argument('lon',type=float,help='input file yaml file',default=None)
-   p.add_argument('lat',type=float,help='input file yaml file',default=None)
+   p.add_argument('input_restart',type=str,help='input restart',default=None)
+   p.add_argument('coord_file',type=str,help='file with coordinates at same resolution as input restart',default=None)
+   p.add_argument('lon',type=float,help='longitude in degrees to select',default=None)
+   p.add_argument('lat',type=float,help='latitude in degrees to select',default=None)
    return vars(p.parse_args())
 
 if __name__ == '__main__':
